@@ -1,7 +1,7 @@
 use chrono::Local;
 use colored::Colorize;
 
-struct ConsoleLogger {
+pub struct ConsoleLogger {
     verbose: bool,
 }
 
