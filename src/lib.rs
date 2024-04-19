@@ -42,25 +42,25 @@ impl ConsoleLogger {
         warn
     }
 
-    pub fn log(&self, message: &str) -> ColoredString  {
+    pub fn log(&self, message: &str) -> ColoredString {
         let log = self.parser(message, "Log").green();
         println!("{}", log);
         log
     }
 
-    pub fn info(&self, message: &str) -> ColoredString  {
+    pub fn info(&self, message: &str) -> ColoredString {
         let info = self.parser(message, "Info").blue();
         println!("{}", info);
         info
     }
 
-    pub fn debug(&self, message: &str) -> ColoredString  {
+    pub fn debug(&self, message: &str) -> ColoredString {
         let debug = self.parser(message, "Debug").purple();
         println!("{}", debug);
         debug
     }
 
-    pub fn error(&self, message: &str) -> ColoredString  {
+    pub fn error(&self, message: &str) -> ColoredString {
         let error = self.parser(message, "Error").red();
         println!("{}", error);
         error
