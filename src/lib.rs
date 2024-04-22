@@ -52,7 +52,7 @@ impl ConsoleLogger {
     }
 
     /// Use `println!()` to output a yellow message in `%m` format str.
-    /// Return `ColoredString`
+    ///- Return `ColoredString`
     pub fn warn(&self, message: &str) -> ColoredString {
         let warn = self.parser(message, "Warn").yellow();
         println!("{}", warn);
@@ -60,7 +60,7 @@ impl ConsoleLogger {
     }
 
     /// Use `println!()` to output a green message in `%m` format str.
-    /// Return `ColoredString`
+    ///- Return `ColoredString`
     pub fn log(&self, message: &str) -> ColoredString {
         let log = self.parser(message, "Log").green();
         println!("{}", log);
@@ -68,7 +68,7 @@ impl ConsoleLogger {
     }
 
     /// Use `println!()` to output a blue message in `%m` format str.
-    /// Return `ColoredString`
+    ///- Return `ColoredString`
     pub fn info(&self, message: &str) -> ColoredString {
         let info = self.parser(message, "Info").blue();
         println!("{}", info);
@@ -76,7 +76,7 @@ impl ConsoleLogger {
     }
 
     /// Use `println!()` to output a purple message in `%m` format str.
-    /// Return `ColoredString`
+    ///- Return `ColoredString`
     pub fn debug(&self, message: &str) -> ColoredString {
         let debug = self.parser(message, "Debug").purple();
         println!("{}", debug);
@@ -84,7 +84,7 @@ impl ConsoleLogger {
     }
 
     /// Use `println!()` to output a red message in `%m` format str.
-    /// Return `ColoredString`
+    ///- Return `ColoredString`
     pub fn error(&self, message: &str) -> ColoredString {
         let error = self.parser(message, "Error").red();
         println!("{}", error);
@@ -103,7 +103,7 @@ impl FileLogger {
     /// ```
     /// use lumus_logger::FileLogger;
     ///
-    /// let logger = ConsoleLogger::new("[ %dt - %i ] - %m", "log.txt");
+    /// let logger = FileLogger::new("[ %dt - %i ] - %m", "log.txt");
     /// logger.warn("Warn message");
     /// logger.info("Info message");
     /// logger.log("Log message");
