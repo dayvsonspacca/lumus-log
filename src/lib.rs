@@ -103,7 +103,7 @@ impl FileLogger {
     /// ```
     /// use lumus_logger::FileLogger;
     ///
-    /// let logger = FileLogger::new("[ %dt - %i ] - %m", "log.txt");
+    /// let mut logger = FileLogger::new("[ %dt - %i ] - %m", "log.txt");
     /// logger.warn("Warn message");
     /// logger.info("Info message");
     /// logger.log("Log message");

@@ -173,8 +173,8 @@ fn test_error_just_message() {
 fn test_error_message_date_info() {
     let logger = ConsoleLogger::new("%m;%d;%i");
 
-    let debug = logger.debug("Error message");
+    let debug = logger.error("Error message");
     let date_now = Local::now().format("%Y-%m-%d").to_string();
 
-    assert_eq!(debug, format!("Error message;{};Error", date_now).purple());
+    assert_eq!(debug, format!("Error message;{};Error", date_now).red());
 }
